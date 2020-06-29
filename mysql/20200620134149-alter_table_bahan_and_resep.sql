@@ -1,0 +1,9 @@
+
+-- +migrate Up
+ALTER TABLE bahan_makanan
+MODIFY resep_id INT UNSIGNED UNIQUE;
+ALTER TABLE resep
+MODIFY name VARCHAR(100) NOT NULL UNIQUE;
+ALTER TABLE resep_kategori
+MODIFY name VARCHAR(100) NOT NULL UNIQUE;
+-- +migrate Down
